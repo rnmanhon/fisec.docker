@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>Thales AuthzForce Web Application</display-name>
+	<env-entry>
+		<description>Configuration directory path that may contain ${...} placeholders, to be resolved as system properties: e.g. ${user.dir}. Default values can be supplied using the ':' separator between key and value (see org.springframework.util.SystemPropertyUtils class). Replace Tomcat property 'catalina.base' with 'com.sun.aas.instanceRoot' for Glassfish.</description>
+		<env-entry-name>org.ow2.authzforce.config.dir</env-entry-name>
+		<env-entry-type>java.lang.String</env-entry-type>
+<!-- 		<env-entry-value>file:///${catalina.base}/conf/authzforce</env-entry-value> -->
+		<env-entry-value>file:///opt/authzforce/conf</env-entry-value>
+	</env-entry>
+	<env-entry>
+		<description>Data (e.g. data of domains created and managed by the API) directory path that may contain ${...} placeholders, to be resolved as system properties: e.g. ${user.dir}. Default values can be supplied using the ':' separator between key and value (see org.springframework.util.SystemPropertyUtils class). Replace Tomcat property 'catalina.base' with 'com.sun.aas.instanceRoot' for Glassfish.</description>
+		<env-entry-name>org.ow2.authzforce.data.dir</env-entry-name>
+		<env-entry-type>java.lang.String</env-entry-type>
+<!-- 		<env-entry-value>file:///${catalina.base}/conf/authzforce</env-entry-value> -->
+		<env-entry-value>file:///opt/authzforce/data</env-entry-value>
+	</env-entry>
+	<env-entry>
+		<description>UUID generator option for domain IDs, set to true if and only if Authzforce deployed in dev environment that is disconnected from the network, 
+			i.e. no 'real' Ethernet address to use, set this JNDI variable to 'true' to initialize the UUID (variant 
+			1) generator with a random multicast address instead.</description>
+		<env-entry-name>org.ow2.authzforce.uuid.gen.randomMulticastAddressBased</env-entry-name>
+		<env-entry-type>java.lang.Boolean</env-entry-type>
+		<env-entry-value>false</env-entry-value>
+	</env-entry>
+	<env-entry>
+		<description>Max number of policies per domain. -1 or any negative value means no max (unlimited).</description>
+		<env-entry-name>org.ow2.authzforce.domain.maxPolicyCount</env-entry-name>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+		<env-entry-value>-1</env-entry-value>
+	</env-entry>
+	<env-entry>
+		<description>Max number of versions per policy. -1 or any negative value means no max (unlimited).</description>
+		<env-entry-name>org.ow2.authzforce.domain.policy.maxVersionCount</env-entry-name>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+		<env-entry-value>-1</env-entry-value>
+	</env-entry>
+	<env-entry>
+		<description>Domains folder-to-memory synchronization interval (seconds); value 0 disables this feature.</description>
+		<env-entry-name>org.ow2.authzforce.domains.sync.interval</env-entry-name>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+		<env-entry-value>0</env-entry-value>
+	</env-entry>
+	<context-param>
+		<description>Location of logging configuration file (any Spring resource path allowed) loaded by SSPG LogConfServletContextListener or LogbackConfigListener (if SSPG disabled) below. Replace Tomcat property 'catalina.base' with 'com.sun.aas.instanceRoot' for Glassfish.</description>
+		<param-name>logbackConfigLocation</param-name>
+<!-- 		<param-value>file:///${catalina.base}/conf/authzforce/logback.xml</param-value> -->
+		<param-value>file:///opt/authzforce/conf/logback.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- <listener> -->
+	<!-- <description>ServletContextListener that shuts down Ehcache CacheManager. Use this to shutdown Ehcache automatically when the web application is shutdown.</description> -->
+	<!-- <listener-class>net.sf.ehcache.constructs.web.ShutdownListener</listener-class> -->
+	<!-- </listener> -->
+<!-- 	<filter> -->
+<!-- 		<filter-name>requestLoggerFilter</filter-name> -->
+<!-- 		<filter-class>fr.xebia.extras.filters.logfilters.RequestLoggerFilter</filter-class> -->
+<!-- 		<init-param> -->
+<!-- 			<param-name>maxDumpSizeInKB</param-name> -->
+<!-- 			<param-value>500</param-value> -->
+<!-- 		</init-param> -->
+<!-- 	</filter> -->
+	<filter>
+		<description>Filter hiding certain exceptions, internal server errors in particular</description>
+		<filter-name>exceptionFilter</filter-name>
+		<filter-class>org.ow2.authzforce.webapp.ExceptionFilter</filter-class>
+	</filter>
+	<servlet>
+		<servlet-name>CXFServlet</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CXFServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>requestLoggerFilter</filter-name> -->
+<!-- 		<servlet-name>CXFServlet</servlet-name> -->
+<!-- 	</filter-mapping> -->
+	<filter-mapping>
+		<filter-name>exceptionFilter</filter-name>
+		<servlet-name>CXFServlet</servlet-name>
+	</filter-mapping>
+</web-app>

@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.ow2.authzforce</groupId>
+		<artifactId>authzforce-ce-server</artifactId>
+		<version>4.4.1</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>authzforce-ce-server-webapp</artifactId>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<packaging>war</packaging>
+	<description>Web application packaging for AuthZForce (PAP/PDP) REST service</description>
+	<url>https://github.com/authzforce/server/rest-service</url>
+	<scm>
+		<connection>scm:git:${git.url.base}.git</connection>
+		<developerConnection>scm:git:${git.url.base}.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>${git.url.base}/webapp</url>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>com.sun.xml.bind</groupId> -->
+		<!-- <artifactId>jaxb-impl</artifactId> -->
+		<!-- <version>2.2.6</version> -->
+		<!-- Prevent inclusion in war for Tomcat because of https://java.net/jira/browse/JAXB-1000: com.sun.xml.bind.v2.ClassFactory -->
+		<!-- has memory leak (upon webapp undeployment/redeployment). Therefore, jaxb RI from JDK >= 7 must be used so -->
+		<!-- no need to ship it with webapp; or jaxb-impl must be only in Tomcat lib directory to be loaded by common -->
+		<!-- classloader (shared libraries) -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<!-- Replaced by jcl-over-slf4j dependency, see http://www.slf4j.org/legacy.html -->
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.logback-extensions</groupId>
+			<artifactId>logback-ext-spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr.xebia.extras</groupId>
+			<artifactId>xebia-logfilter-extras</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>${project.parent.artifactId}-rest-service</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- For license management with Maven, see also: https://wiki.52north.org/bin/view/Documentation/BestPracticeLicenseManagementInSoftwareProjects Property ${currentYear} is defined in parent POM. -->
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<configuration>
+					<header>license/thales-gpl.header.txt</header>
+					<skipExistingHeaders>true</skipExistingHeaders>
+					<includes>
+						<include>src/main/java/**</include>
+					</includes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>format-sources-license</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>format-test-sources-license</id>
+						<phase>process-test-sources</phase>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<packagingExcludes>META-INF/context.xml</packagingExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

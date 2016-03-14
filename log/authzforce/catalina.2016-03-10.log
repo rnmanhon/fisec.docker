@@ -1,0 +1,158 @@
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.68
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Feb 8 2016 20:25:54 UTC
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.68.0
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.13.0-46-generic
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/java-7-openjdk-amd64/jre
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.7.0_95-b00
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /usr/local/tomcat
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /usr/local/tomcat
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/usr/local/tomcat/endorsed
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/usr/local/tomcat
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/usr/local/tomcat
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+Mar 10, 2016 11:43:49 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Mar 10, 2016 11:43:49 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:43:49 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 579 ms
+Mar 10, 2016 11:43:49 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Mar 10, 2016 11:43:49 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.68
+Mar 10, 2016 11:43:49 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/examples
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/examples has finished in 821 ms
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/manager
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/manager has finished in 70 ms
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/docs
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/docs has finished in 40 ms
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/host-manager
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/host-manager has finished in 102 ms
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/ROOT
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/ROOT has finished in 52 ms
+Mar 10, 2016 11:43:50 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:43:50 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:43:50 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1134 ms
+Mar 10, 2016 11:51:16 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:51:16 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:51:16 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Mar 10, 2016 11:51:16 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:51:16 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:51:16 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:51:16 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.68
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Feb 8 2016 20:25:54 UTC
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.68.0
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.13.0-46-generic
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/java-7-openjdk-amd64/jre
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.7.0_95-b00
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /usr/local/tomcat
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /usr/local/tomcat
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/usr/local/tomcat/endorsed
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/usr/local/tomcat
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/usr/local/tomcat
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+Mar 10, 2016 11:51:35 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Mar 10, 2016 11:51:35 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:51:35 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 542 ms
+Mar 10, 2016 11:51:35 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Mar 10, 2016 11:51:35 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.68
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/examples
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/examples has finished in 572 ms
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/manager
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/manager has finished in 53 ms
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/docs
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/docs has finished in 40 ms
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/host-manager
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/host-manager has finished in 51 ms
+Mar 10, 2016 11:51:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/ROOT
+Mar 10, 2016 11:51:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/ROOT has finished in 47 ms
+Mar 10, 2016 11:51:36 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Mar 10, 2016 11:51:36 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Mar 10, 2016 11:51:36 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 810 ms

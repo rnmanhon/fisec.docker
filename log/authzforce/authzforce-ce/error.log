@@ -1,0 +1,1 @@
+2016-03-11 02:54:55,366|WARN |http-bio-8080-exec-9|org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor:166|No root resource matching request path /authzforce/ has been found, Relative Path: /. Please enable FINE/TRACE log level for more details.|
