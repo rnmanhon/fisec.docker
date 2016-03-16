@@ -34,3 +34,15 @@ idm:
   links:
     - mariadb:mariadb
     - authzforce:authzforce
+
+pep:
+  container_name: pep
+  image: pep-proxy-image
+  ports: 
+    - 81:80
+  volumes:
+    - ${FIWARE_SEC_HOME}/data/pep/fiware-pep-proxy:/opt/fiware-pep-proxy 
+    - ${FIWARE_SEC_HOME}/log/pep:/var/log/pep
+  links:
+    - idm:idm 
+    - authzforce:authzforce
