@@ -1,1 +1,3 @@
 .secret_key_store
+node_modules
+cert
