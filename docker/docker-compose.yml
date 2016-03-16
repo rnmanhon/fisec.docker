@@ -1,0 +1,10 @@
+mariadb:
+  container_name: mariadb
+  image: mariadb
+  ports: 
+    - 3307:3306
+  environment:
+    - MYSQL_ROOT_PASSWORD="hello123"
+  volumes:
+    - ${FIWARE_SEC_HOME}/config/mariadb.config:/etc/mysql
+    - ${FIWARE_SEC_HOME}/data/mariadb:/var/lib/mysql
