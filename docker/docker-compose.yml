@@ -1,10 +1,21 @@
-mariadb:
-  container_name: mariadb
-  image: mariadb
+#mariadb:
+#  container_name: mariadb
+#  image: mariadb
+#  ports: 
+#    - 3307:3306
+#  environment:
+#    - MYSQL_ROOT_PASSWORD="hello123"
+#  volumes:
+#    - ${FIWARE_SEC_HOME}/config/mariadb.config:/etc/mysql
+#    - ${FIWARE_SEC_HOME}/data/mariadb:/var/lib/mysql
+#    
+authzforce:
+  build: ./tomcat
+  container_name: authzforce
   ports: 
-    - 3307:3306
-  environment:
-    - MYSQL_ROOT_PASSWORD="hello123"
+    - 8084:8080
   volumes:
-    - ${FIWARE_SEC_HOME}/config/mariadb.config:/etc/mysql
-    - ${FIWARE_SEC_HOME}/data/mariadb:/var/lib/mysql
+    - ${FIWARE_SEC_HOME}/config/authzforce/conf:/usr/local/tomcat/conf
+    - ${FIWARE_SEC_HOME}/data/authzforce/webapps:/usr/local/tomcat/webapps
+    - ${FIWARE_SEC_HOME}/data/authzforce/opt.authzforce:/opt/authzforce 
+    - ${FIWARE_SEC_HOME}/log/authzforce:/usr/local/tomcat/logs 
