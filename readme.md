@@ -13,7 +13,7 @@ export FIWARE_SEC_HOME=<your secirty testing home>/fiware.security.test
 # export FIWARE_SEC_HOME=$PWD
 ```
 
-Start dockers
+Start docker containers
 ```
 cd ${FIWARE_SEC_HOME}/docker
 docker compose up
