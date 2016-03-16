@@ -19,3 +19,17 @@ authzforce:
     - ${FIWARE_SEC_HOME}/data/authzforce/webapps:/usr/local/tomcat/webapps
     - ${FIWARE_SEC_HOME}/data/authzforce/opt.authzforce:/opt/authzforce 
     - ${FIWARE_SEC_HOME}/log/authzforce:/usr/local/tomcat/logs 
+
+idm:
+  container_name: idm
+  image: fiware/idm
+  ports: 
+    - 5000:5000
+    - 8000:8000
+  volumes:
+    - ${FIWARE_SEC_HOME}/config/horizon/openstack_dashboard/local:/horizon/openstack_dashboard/local 
+    - ${FIWARE_SEC_HOME}/config/keystone/etc:/keystone/etc 
+    - ${FIWARE_SEC_HOME}/log/keystone/keystone.log:/var/log/keystone.log
+  links:
+    - mariadb:mariadb
+    - authzforce:authzforce
