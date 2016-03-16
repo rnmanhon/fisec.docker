@@ -16,7 +16,7 @@ export FIWARE_SEC_HOME=<your secirty testing home>/fiware.security.test
 Start docker containers
 ```
 cd ${FIWARE_SEC_HOME}/docker
-docker compose up
+docker-compose up
 ```
 
 If you get the following error, you need to run docker-compose up again. This error is normal when we start many docker in docker-compose.
