@@ -34,6 +34,23 @@ ERROR: An HTTP request took too long to complete. Retry with --verbose to obtain
 If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value (current value: 60).
 ```
 
+if you got the following error, when you run git logs idm
+```
+  File "/horizon/openstack_dashboard/local/local_settings.py", line 97, in <module>
+    os.path.join(LOCAL_PATH, '.secret_key_store'))
+  File "/horizon/horizon/utils/secret_key.py", line 61, in generate_or_read_from_file
+    raise FilePermissionError("Insecure key file permissions!")
+horizon.utils.secret_key.FilePermissionError: Insecure key file permissions!
+
+```
+
+Please to go the following remove the .secret_key_store file
+```
+cd ${FIWARE_SEC_HOME}/config/horizon/openstack_dashboard/local
+rm .secret_key_store
+```
+
+
 You may stop docker-compose by
 ```
 cd ${FIWARE_SEC_HOME}/docker
