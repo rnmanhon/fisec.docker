@@ -13,6 +13,11 @@ export FIWARE_SEC_HOME=<your secirty testing home>/fiware.security.test
 # export FIWARE_SEC_HOME=$PWD
 ```
 
+Add the current user to docker group
+```
+suod usermod -aG docker ${USER}
+```
+
 Start docker containers
 ```
 cd ${FIWARE_SEC_HOME}/docker
