@@ -13,7 +13,7 @@ export FIWARE_SEC_HOME=<your secirty testing home>/fiware.security.test
 # export FIWARE_SEC_HOME=$PWD
 ```
 
-Add the current user to docker group
+If the currnet user is not in docker group, you may use the following command to add the current user to docker group
 ```
 suod usermod -aG docker ${USER}
 ```
