@@ -1,0 +1,94 @@
+Apr 05, 2016 2:56:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.68
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Feb 8 2016 20:25:54 UTC
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.68.0
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.13.0-46-generic
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/java-7-openjdk-amd64/jre
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.7.0_95-b00
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /usr/local/tomcat
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /usr/local/tomcat
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/usr/local/tomcat/endorsed
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/usr/local/tomcat
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/usr/local/tomcat
+Apr 05, 2016 2:56:53 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+Apr 05, 2016 2:56:53 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Apr 05, 2016 2:56:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 05, 2016 2:56:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 05, 2016 2:56:55 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 9710 ms
+Apr 05, 2016 2:56:55 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 05, 2016 2:56:55 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.68
+Apr 05, 2016 2:56:55 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive /usr/local/tomcat/webapps/authzforce.war
+Apr 05, 2016 2:57:08 AM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Apr 05, 2016 2:57:26 AM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [137] milliseconds.
+Apr 05, 2016 2:57:26 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deployment of web application archive /usr/local/tomcat/webapps/authzforce.war has finished in 30,816 ms
+Apr 05, 2016 2:57:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/examples
+Apr 05, 2016 2:57:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/examples has finished in 1,758 ms
+Apr 05, 2016 2:57:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/manager
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/manager has finished in 664 ms
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/docs
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/docs has finished in 281 ms
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/host-manager
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/host-manager has finished in 205 ms
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/local/tomcat/webapps/ROOT
+Apr 05, 2016 2:57:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/local/tomcat/webapps/ROOT has finished in 255 ms
+Apr 05, 2016 2:57:30 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 05, 2016 2:57:30 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 05, 2016 2:57:30 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 34412 ms
+Apr 05, 2016 3:04:24 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 05, 2016 3:04:24 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 05, 2016 3:04:24 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 05, 2016 3:04:25 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 05, 2016 3:04:25 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 05, 2016 3:04:25 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Apr 05, 2016 3:04:25 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
