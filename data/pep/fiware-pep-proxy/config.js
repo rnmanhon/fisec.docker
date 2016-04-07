@@ -15,8 +15,9 @@ config.account_host = 'https://account.lab.fiware.org';
 config.keystone_host = 'idm';
 config.keystone_port = 5000;
 
-config.app_host = 'www.google.es';
-config.app_port = '80';
+// config.app_host = 'www.google.es';
+config.app_host = '172.17.0.1';
+config.app_port = '3000';
 // Use true if the app server listens in https
 config.app_ssl = false;
 

@@ -42,6 +42,8 @@ var IDM = (function() {
 
         var options;
 
+        log.info('token . . ->' + token + '<-');
+
         if (config.tokens_engine === 'keystone') {
             options = {
                 host: config.keystone_host,
@@ -81,6 +83,7 @@ var IDM = (function() {
         }
         
         log.info('Checking token with IDM...');
+        log.info('options %j...', options);
 
         proxy.sendData('http', options, undefined, undefined, function (status, resp) {
             var user_info = JSON.parse(resp);
