@@ -1,0 +1,24 @@
+Apr 27, 2016 9:38:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Apr 27, 2016 9:38:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: Set web app root system property: 'webapp.root' = [/usr/local/tomcat/webapps/authzforce/]
+Apr 27, 2016 9:38:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Logback from [file:///opt/authzforce/conf/logback.xml]
+Apr 27, 2016 9:38:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: JUL to SLF4J bridge is not available on the classpath
+Apr 27, 2016 9:38:52 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+Apr 27, 2016 9:38:57 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Apr 27, 2016 9:38:57 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Apr 27, 2016 9:38:57 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@3460ecc8')
+Apr 27, 2016 9:48:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Apr 27, 2016 9:48:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Apr 27, 2016 9:48:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+Apr 27, 2016 9:48:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Shutting down Logback

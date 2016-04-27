@@ -36,8 +36,8 @@ idm:
     - authzforce:authzforce
 
 pep:
+  build: ./pep
   container_name: pep
-  image: pep-proxy-image
   ports: 
     - 81:80
   volumes:
